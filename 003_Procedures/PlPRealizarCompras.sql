@@ -12,7 +12,7 @@ IS
     v_produto_count NUMBER;
 
 BEGIN
-    -- Desativa a contagem de linhas afetadas
+    
     DBMS_OUTPUT.ENABLE(NULL);
 
     -- Iniciar transação
@@ -60,11 +60,6 @@ BEGIN
             -- Inserir novo item no pedido
             INSERT INTO itens_pedido (item_id, pedido_id, produto_id, quantidade)
             VALUES (itens_pedido_seq.nextval, v_last_pedido_id, p_produto_id, p_quantidade);
-
-            -- Atualizar o total do pedido
-            UPDATE pedidos
-            SET total_pedido = calcular_total_pedido(v_last_pedido_id)
-            WHERE pedido_id = v_last_pedido_id;
 
             -- Commit
             COMMIT;
