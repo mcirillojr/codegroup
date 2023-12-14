@@ -1,5 +1,5 @@
 DECLARE
-    v_pedido_id NUMBER := 2;
+    v_pedido_id NUMBER := 1;
     v_total_pedido NUMBER;
 BEGIN
     v_total_pedido := HR.calcular_total_pedido(v_pedido_id);

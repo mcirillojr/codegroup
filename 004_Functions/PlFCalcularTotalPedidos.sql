@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION HR.calcular_total_pedido(p_pedido_id IN NUMBER)
+create or replace FUNCTION HR.calcular_total_pedido(p_pedido_id IN NUMBER)
 RETURN NUMBER
 IS
     v_total NUMBER(15, 2);
@@ -12,4 +12,3 @@ BEGIN
 
     RETURN v_total;
 END calcular_total_pedido;
-/
